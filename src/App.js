@@ -41,7 +41,7 @@ function Home() {
 }
 
 function Projects() {
-  return <h1>About Page</h1>;
+  return <h1>About Pagew</h1>;
 }
 
 function Contact() {
