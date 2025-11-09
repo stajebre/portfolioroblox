@@ -1,10 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import LiquidEther from './LiquidEther';
 import GradientText from './GradientText';
 import GlassSurface from './GlassSurface';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function GradText({ text, size }) {
   return (
