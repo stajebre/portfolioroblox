@@ -60,10 +60,10 @@ const TOS = () => {
           padding: "15px",
           background: "Transperent",
           display: "block",
-
+          scrollbarColor: "red",
         }}
       >
-        <ol style={{ paddingLeft: "20px", margin: 0 }}>
+        <ol style={{ paddingLeft: "20px", margin: 0,           scrollbarColor: "red",}}>
           <li>
             <strong>Services:</strong>
             <p>I provide custom Roblox scripts (game mechanics, GUIs, automation, etc.). By commissioning me, you agree to these terms.</p>
@@ -117,7 +117,16 @@ const TOS = () => {
           </li>
 
           <li>
-            <strong>Liability:</strong>
+            <strong>Bug Fixing Services:</strong>
+            <ul>
+              <li>You need to provide the place with the bug, I check it out and after fixing you pay and recive the fixed version afterwards.</li>
+              <li>I may only work on my own version of your place/expirience that I delete after you recive fixed version.</li>
+              <li>If my fix coused another bug to apear, I may look into it and fix it if I think it's due to my script/code.</li>
+            </ul>
+          </li>
+
+        <li>
+          <strong>Liability:</strong>
             <ul>
               <li>Scripts are provided “as-is.” I am not responsible for any misuse, Roblox bans, or losses caused by the scripts.</li>
               <li>I am not responsible for Roblox API changes, though I will do my best to ensure the scripts still work.</li>
