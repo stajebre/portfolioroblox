@@ -313,3 +313,8 @@ font-family: 'Rounds Black', sans-serif;
   position: absolute;
   pointer-events: none;
 }
+
+h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
