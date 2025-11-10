@@ -29,7 +29,7 @@ function Home() {
   borderRadius={24}
   className="my-custom-class"
 >
-          <h2 className="welcometext" style={{width: "90%", marginBottom: "5px"}}>Hey! stajebre here ,developer with 2-3 years out side of roblox and about 2 years in roblox studio.I make games perform better ,mainly a scripter and I have some expirience in other categories of roblox studio.</h2>
+          <h2 className="welcometext" style={{width: "90%", marginBottom: "5px"}}>Hey! Stajebre here, developer with 2-3 years out side of roblox and about 2 years in roblox studio.I make games perform better, mainly a scripter and I have some expirience in other categories of roblox studio.</h2>
            <h2 style={{marginBottom: "0px", marginTop: "2px"}}>I specialize in modular, efficient and optimized systems, What i do:</h2>
            <h3>Ui scripting</h3>
            <h3>Server scripting</h3>
