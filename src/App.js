@@ -199,7 +199,6 @@ function Pricing(){
 
     <h1>Pricing:</h1>
     <h2>Small scripts: 250 to 650 Robux</h2>
-    <h3></h3>
       <TOS/>
  <div style={{with: '100%', display: "flex", marginTop: '20%', marginBottom: "0px", flexDirection: "row", top: "1vh"}}>
         <ModernButton text="Home" to="/" />
