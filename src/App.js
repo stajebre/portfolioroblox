@@ -10,7 +10,7 @@ function GradText({ text, size }) {
     <div style={{ fontSize: size || "16px" }}>
       <GradientText
         colors={["#3d82bb", "#ffffff", "#3d82bb", "#ffffff", "#3d82bb"]}
-        animationSpeed={3}
+        animationSpeed={10}
         showBorder={false}
         className="test"
       >
