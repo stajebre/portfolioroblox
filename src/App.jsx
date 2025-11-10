@@ -1,0 +1,243 @@
+import './App.css';
+import LiquidEther from './LiquidEther';
+import GradientText from './GradientText';
+import GlassSurface from './GlassSurface';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
+function GradText({ text, size }) {
+  return (
+    <div style={{ fontSize: size || "16px" }}>
+      <GradientText
+        colors={["#3d82bb", "#ffffff", "#3d82bb", "#ffffff", "#3d82bb"]}
+        animationSpeed={3}
+        showBorder={false}
+        className="test"
+      >
+        {text}
+      </GradientText>
+    </div>
+  );
+}
+function ModernButton({ text, to }) {
+    const navigate = useNavigate();
+  return (
+    <button className="animated-button" onClick={() => navigate(to)}>
+      <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+      </svg>
+      <span className="text">{text}</span>
+      <span className="circle" />
+      <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+      </svg>
+    </button>
+  );
+}
+
+const TOS = () => {
+  return (
+      <div
+      style={{
+        padding: "20px",
+        maxWidth: "800px",
+        height: "50%",
+        margin: "0",
+        top: "30%",
+        fontFamily: "Arial, sans-serif",
+          pointerEvents: "all",
+          position: "absolute",
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
+
+      <div
+        style={{
+          height: "80%", // fixed height ensures scrolling works
+          overflowY: "auto", // enables vertical scroll
+          border: "2px solid black",
+          borderRadius: "8px",
+          padding: "15px",
+          background: "Transperent",
+          display: "block",
+
+        }}
+      >
+        <ol style={{ paddingLeft: "20px", margin: 0 }}>
+          <li>
+            <strong>Services:</strong>
+            <p>I provide custom Roblox scripts (game mechanics, GUIs, automation, etc.). By commissioning me, you agree to these terms.</p>
+          </li>
+
+          <li>
+            <strong>Payments:</strong>
+            <ul>
+              <li>A first payment (deposit) is required before I start your project.</li>
+              <li>The remaining payment is due upon completion unless you choose to cancel the project.</li>
+              <li>If the project is canceled after work has started, partial refunds may be given depending on the work done.</li>
+              <li>Payments are non-refundable for completed work unless otherwise agreed.</li>
+              <li>I expect tax to be covered by you unless otherwise agreed.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Code Ownership:</strong>
+            <ul>
+              <li>You own the scripts after full payment.</li>
+              <li>You cannot resell or redistribute my code without permission.</li>
+              <li>I may use parts of the scripts for my portfolio or personal showcase unless you request confidentiality.</li>
+              <li>If the scripts control part of ur game(example ui), I may request to use that as showcase on portfolio. You can request not to before the project starts.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Revisions & Bug Fixes:</strong>
+            <ul>
+              <li>I offer free bug fixes for issues in the original script if there is no changes made. If u need small changes you may ask.</li>
+              <li>Compatibility revisions with other systems not mentioned at the start are not included.</li>
+              <li>Please provide all system requirements upfront; I am not responsible for problems caused by unmentioned systems or later modifications. I may only start after being provided with all required systems if any.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Project Delivery:</strong>
+            <ul>
+              <li>Delivery times depend on project complexity. I will keep you updated on progress if requested.</li>
+              <li>If you are unsatisfied, we can discuss adjustments, but major changes may cost extra.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Cancellation:</strong>
+            <ul>
+              <li>You may cancel anytime before I've made progres to match the deposit ammount.</li>
+              <li>If I stop working on a project(cancel it my self), I may return a portion of your payment for work not done. If I have made progress that match the first payment you may have the code made so far.</li>
+              <li>If you are unresponsive for more than 7 days without notice, your commission may be canceled without a refund.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Liability:</strong>
+            <ul>
+              <li>Scripts are provided “as-is.” I am not responsible for any misuse, Roblox bans, or losses caused by the scripts.</li>
+              <li>I am not responsible for Roblox API changes, though I will do my best to ensure the scripts still work.</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Agreement:</strong>
+            <ul>
+              <li>By commissioning me, you agree to all these terms.</li>
+              <li>I may update these terms at any time; continued use of my services constitutes acceptance of changes.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <p style={{ marginTop: "15px", fontStyle: "italic", textAlign: "center" }}>
+        Thanks for reading! Following these terms helps make our work smooth and successful.
+      </p>
+    </div>
+  );
+};
+
+
+function Home() {
+  return <div style={{ width: '100%', height: '100vh', position: 'relative',   pointerEvents: 'none' }}>
+      <GradText text="Stajebre's Portfilo" size='4.8vw' />
+      <div className='maindiv' >
+       <GlassSurface 
+  width={'100%'} 
+  height={'100%'}
+  borderRadius={24}
+  className="my-custom-class"
+>     
+      
+          <h2 className="welcometext" style={{width: "60%", marginBottom: "15px"}}>Hey! Stajebre here, developer with 2-3 years out side of roblox and about 2 years in roblox studio.I make games perform better, mainly a scripter and I have some expirience in other categories of roblox studio.</h2>
+           <h2 style={{marginBottom: "5px", marginTop: "3px"}}>I specialize in modular, efficient and optimized systems, What I do and not limited to:</h2>
+           <h3>Ui scripting</h3>
+           <h3>Server scripting</h3>
+           <h3>Cross server coumication</h3>
+           <h3>Global stock</h3>
+           <h3>Custom randomnes systems that don't depend on seeds</h3>
+           <h3>Randomnes in general</h3>
+           <h3>And much more</h3>
+     <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row"}}>
+        <ModernButton text="Projects" to="/Projects" />
+        <ModernButton text="Pricing" to="/Pricing" />
+        </div>
+        </GlassSurface>
+      </div>
+    </div>
+}
+
+function Projects() {
+  return <div className='maindiv' >
+       <GlassSurface 
+  width={'100%'} 
+  height={'100%'}
+  borderRadius={24}
+  className="my-custom-class"
+>     
+      
+     <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row", height: "10%", background: 'red'}}>
+        <ModernButton text="Home" to="/" />
+        <ModernButton text="Pricing" to="/Pricing" />
+      </div>
+        </GlassSurface>
+      </div>
+}
+
+
+function Pricing(){
+  return  <div className='maindiv' style={{height: "94vh", marginTop: "0px", top: "3vh",}} >
+       <GlassSurface 
+  width={'100%'} 
+  height={'100%'}
+  borderRadius={24}
+  className="my-custom-class">
+
+    <h1>Pricing:</h1>
+    <h2>Small scripts: 250 to 650 Robux</h2>
+    <h3></h3>
+      <TOS/>
+ <div style={{with: '100%', display: "flex", marginTop: '20%', marginBottom: "0px", flexDirection: "row", top: "1vh"}}>
+        <ModernButton text="Home" to="/" />
+        <ModernButton text="Projects" to="/Projects" />
+        </div>
+        </GlassSurface>
+</div>
+}
+
+
+function App() {
+  return (
+    <BrowserRouter>
+    <LiquidEther
+        colors={['#95f3e9', '#40f0ff', '#443f9e']}
+        mouseForce={20}
+        cursorSize={100}
+        isViscous={false}
+        viscous={30}
+        iterationsViscous={32}
+        iterationsPoisson={32}
+        resolution={0.5}
+        isBounce={false}
+        autoDemo={true}
+        autoSpeed={0.5}
+        autoIntensity={2.2}
+        takeoverDuration={0.25}
+        autoResumeDelay={3000}
+        autoRampDuration={0.6}
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
+      />
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Projects" element={<Projects />} />
+        <Route path="/Pricing" element={<Pricing />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
