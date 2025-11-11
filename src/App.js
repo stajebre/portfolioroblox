@@ -14,7 +14,7 @@ function GradText({ text, size }) {
   return (
     <div style={{ fontSize: size || "16px" }}>
       <GradientText
-        colors={["#3d82bb", "#ffffff", "#3d82bb", "#ffffff", "#3d82bb"]}
+        colors={["#3d82bb", "#252266", "#3d82bb", "#252266", "#3d82bb"]}
         animationSpeed={10}
         showBorder={false}
         className="test"
@@ -45,6 +45,7 @@ function ModernButton({ text, to }) {
 const TOS = () => {
   return (
       <div
+      className='scroll'
       style={{
         padding: "20px",
         maxWidth: "800px",
@@ -54,23 +55,24 @@ const TOS = () => {
         fontFamily: "Arial, sans-serif",
           pointerEvents: "all",
           position: "absolute",
+        color: "white",
       }}
     >
       <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
 
-      <div
-        style={{
-          height: "80%", // fixed height ensures scrolling works
-          overflowY: "auto", // enables vertical scroll
-          border: "2px solid black",
-          borderRadius: "8px",
-          padding: "15px",
-          background: "Transperent",
-          display: "block",
-          scrollbarColor: "red",
-        }}
-      >
-        <ol style={{ paddingLeft: "20px", margin: 0,           scrollbarColor: "red",}}>
+<div
+  style={{
+    height: "80%",
+    overflowY: "auto",
+    border: "2px solid rgb(0, 183, 255)",
+    borderRadius: "8px",
+    padding: "15px",
+    background: "rgba(0, 4, 255, 0.15)",
+    display: "block",
+  }}
+>
+
+        <ol style={{ paddingLeft: "20px", margin: 0,}}>
           <li>
             <strong>Services:</strong>
             <p>I provide custom Roblox scripts (game mechanics, GUIs, automation, etc.). By commissioning me, you agree to these terms.</p>
@@ -244,22 +246,21 @@ function App() {
   return (
     <BrowserRouter>
     <LiquidEther
-        colors={['#95f3e9', '#40f0ff', '#443f9e']}
         mouseForce={20}
         cursorSize={50}
         isViscous={false}
         viscous={30}
         iterationsViscous={32}
         iterationsPoisson={32}
-        resolution={.225}
+        resolution={0.225}
         isBounce={false}
         autoDemo={true}
         autoSpeed={0.2}
         autoIntensity={0.5}
         takeoverDuration={0.25}
-        autoResumeDelay={10000}
-        autoRampDuration={10}
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
+        autoResumeDelay={1000}
+        autoRampDuration={0.1}
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }}
       />
      <Routes>
         <Route path="/" element={<Home />} />
