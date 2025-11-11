@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
+import GlobalStock from './Videos/GlobalStock.mp4';
 
 function GradText({ text, size }) {
   return (
@@ -22,6 +23,21 @@ function GradText({ text, size }) {
   );
 }
 
+function GlobalStockvid() {
+  return (
+  <div style={{pointerEvents: "all",with: "10vw", height: "40vh"}}>
+   <video
+  width="100%"
+  height="100%"
+  controls
+  pointerEvents="all"
+  muted={false}
+>
+      <source src={GlobalStock} type="video/mp4" />
+    </video>
+    </div>
+  );
+}
 
 function ModernButton({ text, to }) {
     const navigate = useNavigate();
@@ -209,8 +225,20 @@ function Projects() {
   borderRadius={24}
   className="my-custom-class"
 >     
-      
-     <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row", height: "10%", background: 'red'}}>
+      <SplitText
+  text="Global Stock Project:"
+  tag="h1"
+  style={{ marginBottom: "15px", marginTop: "3px", color: "white" }}
+  splitType="chars"
+/>
+      <GlobalStockvid/>
+            <SplitText
+  text="Thats it for now, more coming soon!"
+  tag="h1"
+  style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
+  splitType="chars"
+/>
+     <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row", height: "10%"}}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Pricing" to="/Pricing" />
       </div>
