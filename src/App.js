@@ -4,6 +4,11 @@ import GradientText from './GradientText';
 import GlassSurface from './GlassSurface';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import SplitText from "./SplitText";
+
+const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
 
 function GradText({ text, size }) {
   return (
@@ -19,6 +24,8 @@ function GradText({ text, size }) {
     </div>
   );
 }
+
+
 function ModernButton({ text, to }) {
     const navigate = useNavigate();
   return (
@@ -162,15 +169,30 @@ function Home() {
   className="my-custom-class"
 >     
       
-          <h2 className="welcometext" style={{width: "60%", marginBottom: "15px"}}>Hey! Stajebre here, developer with 2-3 years out side of roblox and about 2 years in roblox studio.I make games perform better, mainly a scripter and I have some expirience in other categories of roblox studio.</h2>
-           <h2 style={{marginBottom: "5px", marginTop: "3px"}}>I specialize in modular, efficient and optimized systems, What I do and not limited to:</h2>
-           <h3>Ui scripting</h3>
-           <h3>Server scripting</h3>
-           <h3>Cross server coumication</h3>
-           <h3>Global stock</h3>
-           <h3>Custom randomnes systems that don't depend on seeds</h3>
-           <h3>Randomnes in general</h3>
-           <h3>And much more</h3>
+          <SplitText
+  text="Hey! Stajebre here, developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
+  tag="h1"
+  className="welcometext"
+  style={{ width: "60%", marginBottom: "15px", color: "white" }}
+  splitType="words"
+/>
+
+<SplitText
+  text="I specialize in modular, efficient and optimized systems, What I do and not limited to:"
+  tag="h1"
+  style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
+  splitType="words"
+/>
+
+<SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Server scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Cross server communication" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Global stock" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Custom randomness systems that don't depend on seeds" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Randomness in general" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="And much more" tag="h2" style={{ color: "white" }} splitType="chars" />
+
+
      <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row"}}>
         <ModernButton text="Projects" to="/Projects" />
         <ModernButton text="Pricing" to="/Pricing" />
@@ -229,7 +251,7 @@ function App() {
         viscous={30}
         iterationsViscous={32}
         iterationsPoisson={32}
-        resolution={0.25}
+        resolution={.225}
         isBounce={false}
         autoDemo={true}
         autoSpeed={0.2}
