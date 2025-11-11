@@ -7,10 +7,6 @@ import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 
-const handleAnimationComplete = () => {
-  console.log('All letters have animated!');
-};
-
 function GradText({ text, size }) {
   return (
     <div style={{ fontSize: size || "16px" }}>
@@ -244,8 +240,8 @@ function Pricing(){
   loop={true}
 />
 <SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Medium scripts: 1k to 6k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Large scripts: 6k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Medium scripts: 1k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
 <SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
 <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
