@@ -13,7 +13,7 @@ export default function LiquidEther({
   BFECC = true,
   resolution = 0.5,
   isBounce = false,
-  colors = ['#5227FF', '#9fd9ff', '#9eb0ef'],
+  colors = ['#5227FF', '#9fd9ff', '#9ea9ef'],
   style = {},
   className = '',
   autoDemo = true,

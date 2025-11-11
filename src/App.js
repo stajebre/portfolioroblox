@@ -264,7 +264,7 @@ function App() {
     <BrowserRouter>
     <LiquidEther
         mouseForce={40}
-        cursorSize={60}
+        cursorSize={40}
         isViscous={false}
         viscous={30}
         iterationsViscous={32}
@@ -275,7 +275,7 @@ function App() {
     autoSpeed={0.5}
     autoIntensity={2.2}
     takeoverDuration={0.25}
-    autoResumeDelay={3000}
+    autoResumeDelay={1100}
     autoRampDuration={0.6}
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }}
       />
