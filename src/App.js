@@ -5,6 +5,7 @@ import GlassSurface from './GlassSurface';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
+import Shuffle from './Shuffle';
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
@@ -229,11 +230,27 @@ function Pricing(){
   height={'100%'}
   borderRadius={24}
   className="my-custom-class">
+    <Shuffle
+  tag="h2"
+  text="Pricing:"
+  shuffleDirection="right"
+  duration={1}
+  animationMode="evenodd"
+  shuffleTimes={1}
+  ease="power3.out"
+  stagger={0.03}
+  threshold={0.1}
+  respectReducedMotion={true}
+  loop={true}
+/>
+<SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Medium scripts: 1k to 6k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Large scripts: 6k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
+<SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
-    <h1>Pricing:</h1>
-    <h2>Small scripts: 250 to 650 Robux</h2>
       <TOS/>
- <div style={{with: '100%', display: "flex", marginTop: '20%', marginBottom: "0px", flexDirection: "row", top: "1vh"}}>
+ <div style={{with: '100%', display: "flex", marginTop: '30%', marginBottom: "0px", flexDirection: "row", top: "1vh"}}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Projects" to="/Projects" />
         </div>
@@ -246,8 +263,8 @@ function App() {
   return (
     <BrowserRouter>
     <LiquidEther
-        mouseForce={20}
-        cursorSize={50}
+        mouseForce={40}
+        cursorSize={60}
         isViscous={false}
         viscous={30}
         iterationsViscous={32}
@@ -255,11 +272,11 @@ function App() {
         resolution={0.225}
         isBounce={false}
         autoDemo={true}
-        autoSpeed={0.2}
-        autoIntensity={0.5}
-        takeoverDuration={0.25}
-        autoResumeDelay={1000}
-        autoRampDuration={0.1}
+    autoSpeed={0.5}
+    autoIntensity={2.2}
+    takeoverDuration={0.25}
+    autoResumeDelay={3000}
+    autoRampDuration={0.6}
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }}
       />
      <Routes>
