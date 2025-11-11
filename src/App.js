@@ -185,7 +185,7 @@ function Home() {
 >     
       
           <SplitText
-  text="Hey! Stajebre here, developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
+  text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
   tag="h1"
   className="welcometext"
   style={{ width: "60%", marginBottom: "15px", color: "white" }}
