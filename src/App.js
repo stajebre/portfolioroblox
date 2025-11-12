@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'; // importin all of the stuff thats gona be used
 import LiquidEther from './LiquidEther';
 import GradientText from './GradientText';
 import GlassSurface from './GlassSurface';
@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 import GlobalStock from './Videos/GlobalStock.mp4';
-
-function GradText({ text, size }) {
+function GradText({ text, size }) { {/* creates text with gradient*/}
   return (
     <div style={{ fontSize: size || "16px" }}>
       <GradientText
@@ -22,7 +21,6 @@ function GradText({ text, size }) {
     </div>
   );
 }
-
 function GlobalStockvid() {
   return (
   <div style={{pointerEvents: "all",with: "10vw", height: "40vh"}}>
@@ -38,8 +36,7 @@ function GlobalStockvid() {
     </div>
   );
 }
-
-function ModernButton({ text, to }) {
+function ModernButton({ text, to }) { {/* creates buton*/}
     const navigate = useNavigate();
   return (
     <button className="animated-button" onClick={() => navigate(to)}>
@@ -54,8 +51,7 @@ function ModernButton({ text, to }) {
     </button>
   );
 }
-
-const TOS = () => {
+const TOS = () => { {/* ToS here */}
   return (
       <div
       className='scroll'
@@ -72,8 +68,7 @@ const TOS = () => {
       }}
     >
       <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
-
-<div
+<div 
   style={{
     height: "80%",
     overflowY: "auto",
@@ -85,7 +80,7 @@ const TOS = () => {
   }}
 >
 
-        <ol style={{ paddingLeft: "20px", margin: 0,}}>
+        <ol style={{ paddingLeft: "20px", margin: 0,}}> {/* ToS here */}
           <li>
             <strong>Services:</strong>
             <p>I provide custom Roblox scripts (game mechanics, GUIs, automation, etc.). By commissioning me, you agree to these terms.</p>
@@ -177,14 +172,14 @@ function Home() {
   return <div style={{ width: '100%', height: '100vh', position: 'relative',   pointerEvents: 'none' }}>
       <GradText text="Stajebre's Portfilo" size='4.8vw' />
       <div className='maindiv' >
-       <GlassSurface 
+       <GlassSurface /* Creates glass element from outside function */
   width={'100%'} 
   height={'100%'}
   borderRadius={24}
   className="my-custom-class"
 >     
       
-          <SplitText
+          <SplitText /* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/
   text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
   tag="h1"
   className="welcometext"
@@ -199,7 +194,7 @@ function Home() {
   splitType="words"
 />
 
-<SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
 <SplitText text="Server scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
 <SplitText text="Cross server communication" tag="h2" style={{ color: "white" }} splitType="chars" />
 <SplitText text="Global stock" tag="h2" style={{ color: "white" }} splitType="chars" />
@@ -209,7 +204,7 @@ function Home() {
 
 
      <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row"}}>
-        <ModernButton text="Projects" to="/Projects" />
+        <ModernButton text="Projects" to="/Projects" /> {/* Creates buttons with text and what do do when clicked */}
         <ModernButton text="Pricing" to="/Pricing" />
         </div>
         </GlassSurface>
@@ -254,7 +249,7 @@ function Pricing(){
   height={'100%'}
   borderRadius={24}
   className="my-custom-class">
-    <Shuffle
+    <Shuffle  /* Theese next lines are functions to create elemtns of the text that shuffels */
   tag="h2"
   text="Pricing:"
   shuffleDirection="right"
@@ -267,13 +262,13 @@ function Pricing(){
   respectReducedMotion={true}
   loop={true}
 />
-<SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+<SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
 <SplitText text="Medium scripts: 1k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
 <SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
 <SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
 <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
-      <TOS/>
+      <TOS/> {/* loads the terms of service*/}
  <div style={{with: '100%', display: "flex", marginTop: '30%', marginBottom: "0px", flexDirection: "row", top: "1vh"}}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Projects" to="/Projects" />
@@ -281,13 +276,11 @@ function Pricing(){
         </GlassSurface>
 </div>
 }
-
-
 function App() {
   return (
     <BrowserRouter>
-    <LiquidEther
-        mouseForce={40}
+    <LiquidEther // creates background that will be used for all other scripts, here are settins of it i dont think i need to explain they explan them self prety much
+        mouseForce={40} 
         cursorSize={40}
         isViscous={false}
         viscous={30}
@@ -301,9 +294,9 @@ function App() {
     takeoverDuration={0.25}
     autoResumeDelay={1100}
     autoRampDuration={0.6}
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }}
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }} // some quick css
       />
-     <Routes>
+     <Routes> {/* routes, loads the pages in the url */} 
         <Route path="/" element={<Home />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Pricing" element={<Pricing />} />
@@ -311,5 +304,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
+export default App; // exports the app that will be loaded by index.js(other code)
