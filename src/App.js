@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 import GlobalStock from './Videos/GlobalStock.mp4';
-function GradText({ text, size }) { {/* creates text with gradient*/}
+function GradText({ text, size }) { /* creates text with gradient*/
   return (
     <div style={{ fontSize: size || "16px" }}>
       <GradientText
@@ -36,7 +36,8 @@ function GlobalStockvid() {
     </div>
   );
 }
-function ModernButton({ text, to }) { {/* creates buton*/}
+/* creates buton*/
+function ModernButton({ text, to }) { 
     const navigate = useNavigate();
   return (
     <button className="animated-button" onClick={() => navigate(to)}>
@@ -51,7 +52,8 @@ function ModernButton({ text, to }) { {/* creates buton*/}
     </button>
   );
 }
-const TOS = () => { {/* ToS here */}
+// ToS here
+const TOS = () => { 
   return (
       <div
       className='scroll'
