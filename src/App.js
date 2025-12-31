@@ -99,7 +99,7 @@ const TOS = () => {
         }}
       >
 
-        <ol style={{ paddingLeft: "20px", margin: 0, }}> {/* ToS here */}
+        <ol style={{ paddingLeft: "20px", margin: 0, }}>
           <li>
             <strong>Services:</strong>
             <p>I provide custom Roblox scripts (game mechanics, GUIs, automation, etc.). By commissioning me, you agree to these terms.</p>
@@ -191,7 +191,7 @@ function Home() {
     <GradText text="Stajebre's Portfilo" size='4.8vw' />
     <div className='maindivhome' >
 
-      <SplitText /* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/
+      <SplitText
         text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
         tag="h1"
         className="welcometext"
@@ -206,7 +206,7 @@ function Home() {
         splitType="words"
       />
 
-      <SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
+      <SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
       <SplitText text="Server scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
       <SplitText text="Cross server communication" tag="h2" style={{ color: "white" }} splitType="chars" />
       <SplitText text="Global stock" tag="h2" style={{ color: "white" }} splitType="chars" />
