@@ -55,7 +55,7 @@ function RanksSystemvid() {
     </div>
   );
 }
-/* creates buton*/
+
 function ModernButton({ text, to }) {
   const navigate = useNavigate();
   return (
@@ -71,7 +71,7 @@ function ModernButton({ text, to }) {
     </button>
   );
 }
-// ToS here
+
 const TOS = () => {
   return (
     <div
