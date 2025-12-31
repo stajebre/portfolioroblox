@@ -26,38 +26,38 @@ function GradText({ text, size }) { /* creates text with gradient*/
 
 function GlobalStockvid() {
   return (
-  <div style={{pointerEvents: "all",with: 'auto', height: "auto"}}>
-   <video
-  width="97%"
-  height="auto"
-  controls
-  pointerEvents="all"
-  muted={false}
->
-      <source src={GlobalStock} type="video/mp4" />
-    </video>
+    <div style={{ pointerEvents: "all", with: 'auto', height: "auto" }}>
+      <video
+        width="97%"
+        height="auto"
+        controls
+        pointerEvents="all"
+        muted={false}
+      >
+        <source src={GlobalStock} type="video/mp4" />
+      </video>
     </div>
   );
 }
 
 function RanksSystemvid() {
   return (
-  <div style={{pointerEvents: "all",with: 'auto', height: "auto"}}>
-   <video
-  width="97%"
-  height="auto"
-  controls
-  pointerEvents="all"
-  muted={false}
->
-      <source src={RanksSystem} type="video/mp4" />
-    </video>
+    <div style={{ pointerEvents: "all", with: 'auto', height: "auto" }}>
+      <video
+        width="97%"
+        height="auto"
+        controls
+        pointerEvents="all"
+        muted={false}
+      >
+        <source src={RanksSystem} type="video/mp4" />
+      </video>
     </div>
   );
 }
 /* creates buton*/
-function ModernButton({ text, to }) { 
-    const navigate = useNavigate();
+function ModernButton({ text, to }) {
+  const navigate = useNavigate();
   return (
     <button className="animated-button" onClick={() => navigate(to)}>
       <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -72,34 +72,34 @@ function ModernButton({ text, to }) {
   );
 }
 // ToS here
-const TOS = () => { 
+const TOS = () => {
   return (
-<div
-  className='scroll'
-  style={{
-    maxWidth: "80%",
-    height: "clamp(50%, 55%, 60%)",
-    margin: "0",
-    top: "0px",
-    fontFamily: "Arial, sans-serif",
-    pointerEvents: "all",
-    color: "white",
-  }}
->
-  <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
-  <div
-    style={{
-      height: "80%",
-      overflowY: "auto",
-      border: "2px solid rgb(0, 183, 255)",
-      borderRadius: "8px",
-      background: "rgba(0, 4, 255, 0.15)",
-      display: "flex",
-      flexDirection: "column",
-    }}
-  >
+    <div
+      className='scroll'
+      style={{
+        maxWidth: "80%",
+        height: "clamp(50%, 55%, 60%)",
+        margin: "0",
+        top: "0px",
+        fontFamily: "Arial, sans-serif",
+        pointerEvents: "all",
+        color: "white",
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
+      <div
+        style={{
+          height: "80%",
+          overflowY: "auto",
+          border: "2px solid rgb(0, 183, 255)",
+          borderRadius: "8px",
+          background: "rgba(0, 4, 255, 0.15)",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
 
-        <ol style={{ paddingLeft: "20px", margin: 0,}}> {/* ToS here */}
+        <ol style={{ paddingLeft: "20px", margin: 0, }}> {/* ToS here */}
           <li>
             <strong>Services:</strong>
             <p>I provide custom Roblox scripts (game mechanics, GUIs, automation, etc.). By commissioning me, you agree to these terms.</p>
@@ -161,8 +161,8 @@ const TOS = () => {
             </ul>
           </li>
 
-        <li>
-          <strong>Liability:</strong>
+          <li>
+            <strong>Liability:</strong>
             <ul>
               <li>Scripts are provided “as-is.” I am not responsible for any misuse, Roblox bans, or losses caused by the scripts.</li>
               <li>I am not responsible for Roblox API changes, though I will do my best to ensure the scripts still work.</li>
@@ -186,143 +186,137 @@ const TOS = () => {
   );
 };
 
-
 function Home() {
-  return <div style={{ width: '100vw', height: '100vh',   pointerEvents: 'none' }}>
-      <GradText text="Stajebre's Portfilo" size='4.8vw' />
-      <div className='maindivhome' >
-      
-          <SplitText /* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/
-  text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
-  tag="h1"
-  className="welcometext"
-  style={{ width: "60%", marginBottom: "15px", color: "white" }}
-  splitType="words"
-/>
+  return <div style={{ width: '100vw', height: '100vh', pointerEvents: 'none' }}>
+    <GradText text="Stajebre's Portfilo" size='4.8vw' />
+    <div className='maindivhome' >
 
-<SplitText
-  text="I specialize in modular, efficient and optimized systems, What I do and not limited to:"
-  tag="h1"
-  style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
-  splitType="words"
-/>
+      <SplitText /* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/
+        text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
+        tag="h1"
+        className="welcometext"
+        style={{ width: "60%", marginBottom: "15px", color: "white" }}
+        splitType="words"
+      />
 
-<SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
-<SplitText text="Server scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Cross server communication" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Global stock" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Custom randomness systems that don't depend on seeds" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Randomness in general" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="And much more" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText
+        text="I specialize in modular, efficient and optimized systems, What I do and not limited to:"
+        tag="h1"
+        style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
+        splitType="words"
+      />
 
-
-     <div style={{
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    position: "absolute",
-    bottom: 0,
-    marginBottom: "1%",
-    top: "auto",
-  }}>
+      <SplitText text="UI scripting" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
+      <SplitText text="Server scripting" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="Cross server communication" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="Global stock" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="Custom randomness systems that don't depend on seeds" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="Randomness in general" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="And much more" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <div style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        position: "absolute",
+        bottom: 0,
+        marginBottom: "1%",
+        top: "auto",
+      }}>
         <ModernButton text="Projects" to="/Projects" />
         <ModernButton text="Pricing" to="/Pricing" />
-        </div>
       </div>
     </div>
+  </div>
 }
 
 function Projects() {
-  return <div className='maindiv' > 
+  return <div className='maindiv' >
+    <SplitText
+      text="Pojects"
+      tag="h1"
+      className="BigText"
+      splitType="chars"
+    />
+    <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
       <SplitText
-  text="Pojects"
-  tag="h1"
-  className="BigText"
-  splitType="chars"
-  />
-
-  <div className="contentinner" style={{height: "70%", with: "100%", overflowY: "auto"}}>
+        text="Global Stock Project:"
+        tag="h1"
+        splitType="chars"
+      />
+      <GlobalStockvid />
       <SplitText
-  text="Global Stock Project:"
-  tag="h1"
-  splitType="chars"
-  />
-      <GlobalStockvid/>
-            <SplitText
-  text="Ranks System:"
-  tag="h1"
-  splitType="chars"
-  />
-      <RanksSystemvid/>
-            <SplitText
-  text="Thats it for now, more coming soon!"
-  tag="h1"
-  style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
-  splitType="chars"
-/>
-       </div>
-      <div style={{
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    position: "absolute",
-    bottom: 0,
-    marginBottom: "1%",
-    top: "auto",
-  }}>
-        <ModernButton text="Home" to="/" />
-        <ModernButton text="Pricing" to="/Pricing" />
-      </div>
- 
-      </div>
-      
+        text="Ranks System:"
+        tag="h1"
+        splitType="chars"
+      />
+      <RanksSystemvid />
+      <SplitText
+        text="Thats it for now, more coming soon!"
+        tag="h1"
+        style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
+        splitType="chars"
+      />
+    </div>
+    <div style={{
+      width: "100%",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      position: "absolute",
+      bottom: 0,
+      marginBottom: "1%",
+      top: "auto",
+    }}>
+      <ModernButton text="Home" to="/" />
+      <ModernButton text="Pricing" to="/Pricing" />
+    </div>
+  </div>
 }
 
 
-function Pricing(){
-  return  <div className='maindiv' style={{height: "94vh", marginTop: "0px", top: "3vh",}} >
+function Pricing() {
+  return <div className='maindiv' style={{ height: "94vh", marginTop: "0px", top: "3vh", }} >
     <Shuffle  /* Theese next lines are functions to create elemtns of the text that shuffels */
-  tag="h2"
-  text="Pricing:"
-  shuffleDirection="right"
-  duration={1}
-  animationMode="evenodd"
-  shuffleTimes={1}
-  ease="power3.out"
-  stagger={0.03}
-  threshold={0.1}
-  respectReducedMotion={true}
-  loop={true}
-/>
-<SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
-<SplitText text="Medium scripts: 1k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-<SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
-<SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
+      tag="h2"
+      text="Pricing:"
+      shuffleDirection="right"
+      duration={1}
+      animationMode="evenodd"
+      shuffleTimes={1}
+      ease="power3.out"
+      stagger={0.03}
+      threshold={0.1}
+      respectReducedMotion={true}
+      loop={true}
+    />
+    <SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
+    <SplitText text="Medium scripts: 1k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
+    <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
-      <TOS/> {/* loads the terms of service*/}
- <div style={{
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    position: "absolute",
-    bottom: 0,
-    marginBottom: "1%",
-    top: "auto",
-  }}>
-        <ModernButton text="Home" to="/" />
-        <ModernButton text="Projects" to="/Projects" />
-        </div>
-</div>
+    <TOS /> {/* loads the terms of service*/}
+    <div style={{
+      width: "100%",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      position: "absolute",
+      bottom: 0,
+      marginBottom: "1%",
+      top: "auto",
+    }}>
+      <ModernButton text="Home" to="/" />
+      <ModernButton text="Projects" to="/Projects" />
+    </div>
+  </div>
 }
 function App() {
   return (
     <BrowserRouter>
-    <LiquidEther // creates background that will be used for all other scripts, here are settins of it i dont think i need to explain they explan them self prety much
-        mouseForce={40} 
+      <LiquidEther // creates background that will be used for all other scripts, here are settins of it i dont think i need to explain they explan them self prety much
+        mouseForce={40}
         cursorSize={40}
         isViscous={false}
         viscous={30}
@@ -331,14 +325,14 @@ function App() {
         resolution={0.225}
         isBounce={false}
         autoDemo={true}
-    autoSpeed={0.5}
-    autoIntensity={2.2}
-    takeoverDuration={0.25}
-    autoResumeDelay={1100}
-    autoRampDuration={0.6}
+        autoSpeed={0.5}
+        autoIntensity={2.2}
+        takeoverDuration={0.25}
+        autoResumeDelay={1100}
+        autoRampDuration={0.6}
         style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }} // some quick css
       />
-     <Routes> {/* routes, loads the pages in the url */} 
+      <Routes> {/* routes, loads the pages in the url */}
         <Route path="/" element={<Home />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Pricing" element={<Pricing />} />
