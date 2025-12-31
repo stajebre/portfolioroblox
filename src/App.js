@@ -44,10 +44,10 @@ function GradText({ text, size }) { /* creates text with gradient*/
 
 function GlobalStockvid() {
   return (
-  <div style={{pointerEvents: "all",with: "10vw", height: "40vh"}}>
+  <div style={{pointerEvents: "all",with: 'auto', height: "auto"}}>
    <video
-  width="auto"
-  height="100%"
+  width="97%"
+  height="auto"
   controls
   pointerEvents="all"
   muted={false}
@@ -60,10 +60,10 @@ function GlobalStockvid() {
 
 function RanksSystemvid() {
   return (
-  <div style={{pointerEvents: "all",with: "10vw", height: "40vh"}}>
+  <div style={{pointerEvents: "all",with: 'auto', height: "auto"}}>
    <video
-  width="auto"
-  height="100%"
+  width="97%"
+  height="auto"
   controls
   pointerEvents="all"
   muted={false}
@@ -92,32 +92,31 @@ function ModernButton({ text, to }) {
 // ToS here
 const TOS = () => { 
   return (
-      <div
-      className='scroll'
-      style={{
-        padding: "20px",
-        maxWidth: "800px",
-        height: "50%",
-        margin: "0",
-        top: "30%",
-        fontFamily: "Arial, sans-serif",
-          pointerEvents: "all",
-          position: "absolute",
-        color: "white",
-      }}
-    >
-      <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
-<div 
+<div
+  className='scroll'
   style={{
-    height: "80%",
-    overflowY: "auto",
-    border: "2px solid rgb(0, 183, 255)",
-    borderRadius: "8px",
-    padding: "15px",
-    background: "rgba(0, 4, 255, 0.15)",
-    display: "block",
+    padding: "20px",
+    maxWidth: "80%",
+    height: "clamp(20%, 60%, 80%)", // parent now has a real, adjustable height
+    margin: "0",
+    top: "0",
+    fontFamily: "Arial, sans-serif",
+    pointerEvents: "all",
+    color: "white",
   }}
 >
+  <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
+  <div
+    style={{
+      height: "80%", // now inner div will be 80% of parent
+      overflowY: "auto",
+      border: "2px solid rgb(0, 183, 255)",
+      borderRadius: "8px",
+      background: "rgba(0, 4, 255, 0.15)",
+      display: "flex",
+      flexDirection: "column",
+    }}
+  >
 
         <ol style={{ paddingLeft: "20px", margin: 0,}}> {/* ToS here */}
           <li>
@@ -322,7 +321,16 @@ function Pricing(){
 <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
       <TOS/> {/* loads the terms of service*/}
- <div style={{with: '100%', display: "flex", marginTop: '30%', marginBottom: "0px", flexDirection: "row", top: "1vh"}}>
+ <div style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    position: "absolute", // make it positioned relative to parent
+    bottom: 0,            // stick to bottom
+    marginBottom: 0,
+    top: "auto",          // not needed, optional
+  }}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Projects" to="/Projects" />
         </div>

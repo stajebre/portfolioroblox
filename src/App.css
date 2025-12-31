@@ -288,11 +288,6 @@ font-family: 'Rounds Black', sans-serif;
   outline-offset: 2px;
 }
 
-.BigText{
- font-weight: 0;
- font-size: 3.4em;
-}
-
 .maindiv {
   width: 80vw;
   height: 84vh;
@@ -357,7 +352,7 @@ h1, h2, h3, .title {
   margin-bottom: 0px;
 font-family: 'Playfair Display', serif;
   font-weight: 700;
-  line-height: 1.2;
+font-size: clamp(1.1rem, 2.5vw, 2rem);
   color: rgb(255, 255, 255);
 }
 
@@ -412,7 +407,6 @@ font-family: 'Playfair Display', serif;
     margin-right: 10px;
     margin-bottom: 0px;
     height: 6vh;
-    margin-top: 15%;
   }
   .animated-button svg {
     position: absolute;
@@ -485,7 +479,7 @@ font-family: 'Playfair Display', serif;
 
 
   .shuffle-parent {
-    color: white;
+    color: rgb(255, 255, 255);
   display: inline-block;
   white-space: normal;
   word-wrap: break-word;
@@ -523,14 +517,18 @@ font-family: 'Playfair Display', serif;
     pointer-events: none;
 }
 
-
-  .my-custom-class{
+.my-custom-class{
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 0.5rem;
   border-radius: inherit;
   position: relative;
   z-index: 1;
   }
+
+.BigText{
+ font-weight: 0;
+ font-size: 3.4em;
+ margin-top: 2vh;
+}
