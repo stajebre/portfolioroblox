@@ -208,9 +208,9 @@ const TOS = () => {
 
 
 function Home() {
-  return <div style={{ width: '100%', height: '10 0%',   pointerEvents: 'none' }}>
+  return <div style={{ width: '100%', height: '100%',   pointerEvents: 'none' }}>
       <GradText text="Stajebre's Portfilo" size='4.8vw' />
-      <div className='maindiv' >
+      <div className='maindivhome' >
        <Surface
         /* Creates glass element from outside function */
   borderRadius={24}

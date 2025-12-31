@@ -309,6 +309,22 @@ font-family: 'Rounds Black', sans-serif;
   position: absolute;
   pointer-events: none;
 }
+.maindivhome {
+  width: 80vw;
+  height: 84vh;
+  z-index: 10;
+  margin-top: 0%;
+    border-style: solid;
+  border-width: 3px;
+  border-color: #0044ff;
+  border-radius: 8px;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  pointer-events: none;
+}
 
 .contentinner {
   width: 50%;
