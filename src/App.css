@@ -289,8 +289,8 @@ font-family: 'Rounds Black', sans-serif;
 }
 
 .maindiv {
-  width: 80vw;
-  height: 84vh;
+  width: clamp(85vw, 95vw, 99vw);
+  height: clamp(75vh, 70vh, 90vh);
   z-index: 10;
   margin-top: 4%;
     border-style: solid;
@@ -300,24 +300,24 @@ font-family: 'Rounds Black', sans-serif;
   justify-self: center;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
   pointer-events: none;
 }
 .maindivhome {
-  width: 80vw;
-  height: 84vh;
+  width: clamp(75vw, 80vw, 90vw);
+  height: clamp(75vh, 80vh, 99vh);
+  padding: 0;
   z-index: 10;
-  margin-top: 0%;
-    border-style: solid;
-  border-width: 3px;
-  border-color: #0044ff;
+  border: 3px solid #0044ff;
   border-radius: 8px;
-  justify-self: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
-  position: absolute;
+  align-self: center;
+  justify-self: center;
+  transform: translate(0%, 5%);
   pointer-events: none;
 }
 
@@ -337,7 +337,7 @@ font-family: 'Rounds Black', sans-serif;
   z-index: 5;
   padding-top: 15px;
   overflow-y: auto;
-   pointer-events: auto;
+  pointer-events: auto;
   scrollbar-color: #00b7ff rgba(0, 69, 97, 0.308);
   scrollbar-width: thin;
 }
@@ -483,9 +483,8 @@ font-size: clamp(1.1rem, 2.5vw, 2rem);
   display: inline-block;
   white-space: normal;
   word-wrap: break-word;
-  will-change: transform;
-  line-height: 1;
   font-size: 4rem;
+  line-height: 1;
   font-family: 'Press Start 2P', sans-serif;
   text-transform: uppercase;
   visibility: hidden;
@@ -525,6 +524,8 @@ font-size: clamp(1.1rem, 2.5vw, 2rem);
   border-radius: inherit;
   position: relative;
   z-index: 1;
+  height: 100%;
+  width: 100%;
   }
 
 .BigText{

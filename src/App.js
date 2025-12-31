@@ -7,25 +7,7 @@ import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 import GlobalStock from './Videos/GlobalStock.mp4';
 import RanksSystem from './Videos/Ranks.mp4'
-
-function Surface({ children, borderRadius = 24, className }) {
-  return (
-    <div
-      className={className}
-      style={{
-        width: '80vw',
-        height: '90vh',
-        borderRadius,
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      {children}
-    </div>
-  );
-}
-
+import { clamp } from 'three/src/math/MathUtils.js';
 
 function GradText({ text, size }) { /* creates text with gradient*/
   return (
@@ -95,11 +77,10 @@ const TOS = () => {
 <div
   className='scroll'
   style={{
-    padding: "20px",
     maxWidth: "80%",
-    height: "clamp(20%, 60%, 80%)", // parent now has a real, adjustable height
+    height: "clamp(50%, 55%, 60%)",
     margin: "0",
-    top: "0",
+    top: "0px",
     fontFamily: "Arial, sans-serif",
     pointerEvents: "all",
     color: "white",
@@ -108,7 +89,7 @@ const TOS = () => {
   <h1 style={{ textAlign: "center" }}>Roblox Scripting Services - Terms of Service</h1>
   <div
     style={{
-      height: "80%", // now inner div will be 80% of parent
+      height: "80%",
       overflowY: "auto",
       border: "2px solid rgb(0, 183, 255)",
       borderRadius: "8px",
@@ -207,14 +188,9 @@ const TOS = () => {
 
 
 function Home() {
-  return <div style={{ width: '100%', height: '100%',   pointerEvents: 'none' }}>
+  return <div style={{ width: '100vw', height: '100vh',   pointerEvents: 'none' }}>
       <GradText text="Stajebre's Portfilo" size='4.8vw' />
       <div className='maindivhome' >
-       <Surface
-        /* Creates glass element from outside function */
-  borderRadius={24}
-  className="my-custom-class"
->     
       
           <SplitText /* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/
   text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
@@ -240,23 +216,25 @@ function Home() {
 <SplitText text="And much more" tag="h2" style={{ color: "white" }} splitType="chars" />
 
 
-     <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row"}}>
-        <ModernButton text="Projects" to="/Projects" /> {/* Creates buttons with text and what do do when clicked */}
+     <div style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    position: "absolute",
+    bottom: 0,
+    marginBottom: "1%",
+    top: "auto",
+  }}>
+        <ModernButton text="Projects" to="/Projects" />
         <ModernButton text="Pricing" to="/Pricing" />
         </div>
-        </Surface>
       </div>
     </div>
 }
 
 function Projects() {
-  return <div className='maindiv' >
-       <Surface
-  width={'100%'} 
-  height={'100%'}
-  borderRadius={24}
-  className="my-custom-class"
->     
+  return <div className='maindiv' > 
       <SplitText
   text="Pojects"
   tag="h1"
@@ -264,16 +242,18 @@ function Projects() {
   splitType="chars"
   />
 
-  <div className="contentinner" style={{height: "60%", with: "100%", overflowY: "auto"}}>
+  <div className="contentinner" style={{height: "70%", with: "100%", overflowY: "auto"}}>
       <SplitText
   text="Global Stock Project:"
   tag="h1"
   splitType="chars"
   />
-
-
-
       <GlobalStockvid/>
+            <SplitText
+  text="Ranks System:"
+  tag="h1"
+  splitType="chars"
+  />
       <RanksSystemvid/>
             <SplitText
   text="Thats it for now, more coming soon!"
@@ -282,12 +262,20 @@ function Projects() {
   splitType="chars"
 />
        </div>
-     <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row", height: "10%"}}>
+      <div style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    position: "absolute",
+    bottom: 0,
+    marginBottom: "1%",
+    top: "auto",
+  }}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Pricing" to="/Pricing" />
       </div>
  
-        </Surface>
       </div>
       
 }
@@ -295,12 +283,6 @@ function Projects() {
 
 function Pricing(){
   return  <div className='maindiv' style={{height: "94vh", marginTop: "0px", top: "3vh",}} >
-       <Surface
-
-  width={'100%'} 
-  height={'100%'}
-  borderRadius={24}
-  className="my-custom-class">
     <Shuffle  /* Theese next lines are functions to create elemtns of the text that shuffels */
   tag="h2"
   text="Pricing:"
@@ -326,15 +308,14 @@ function Pricing(){
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    position: "absolute", // make it positioned relative to parent
-    bottom: 0,            // stick to bottom
-    marginBottom: 0,
-    top: "auto",          // not needed, optional
+    position: "absolute",
+    bottom: 0,
+    marginBottom: "1%",
+    top: "auto",
   }}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Projects" to="/Projects" />
         </div>
-        </Surface>
 </div>
 }
 function App() {
