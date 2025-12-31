@@ -1,12 +1,32 @@
 import './App.css'; // importin all of the stuff thats gona be used
 import LiquidEther from './LiquidEther';
 import GradientText from './GradientText';
-import GlassSurface from './GlassSurface';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 import GlobalStock from './Videos/GlobalStock.mp4';
+import RanksSystem from './Videos/Ranks.mp4'
+
+function Surface({ children, borderRadius = 24, className }) {
+  return (
+    <div
+      className={className}
+      style={{
+        width: '80vw',
+        height: '90vh',
+        borderRadius,
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+
 function GradText({ text, size }) { /* creates text with gradient*/
   return (
     <div style={{ fontSize: size || "16px" }}>
@@ -21,17 +41,34 @@ function GradText({ text, size }) { /* creates text with gradient*/
     </div>
   );
 }
+
 function GlobalStockvid() {
   return (
   <div style={{pointerEvents: "all",with: "10vw", height: "40vh"}}>
    <video
-  width="100%"
+  width="auto"
   height="100%"
   controls
   pointerEvents="all"
   muted={false}
 >
       <source src={GlobalStock} type="video/mp4" />
+    </video>
+    </div>
+  );
+}
+
+function RanksSystemvid() {
+  return (
+  <div style={{pointerEvents: "all",with: "10vw", height: "40vh"}}>
+   <video
+  width="auto"
+  height="100%"
+  controls
+  pointerEvents="all"
+  muted={false}
+>
+      <source src={RanksSystem} type="video/mp4" />
     </video>
     </div>
   );
@@ -171,12 +208,11 @@ const TOS = () => {
 
 
 function Home() {
-  return <div style={{ width: '100%', height: '100vh', position: 'relative',   pointerEvents: 'none' }}>
+  return <div style={{ width: '100%', height: '10 0%',   pointerEvents: 'none' }}>
       <GradText text="Stajebre's Portfilo" size='4.8vw' />
       <div className='maindiv' >
-       <GlassSurface /* Creates glass element from outside function */
-  width={'100%'} 
-  height={'100%'}
+       <Surface
+        /* Creates glass element from outside function */
   borderRadius={24}
   className="my-custom-class"
 >     
@@ -209,44 +245,59 @@ function Home() {
         <ModernButton text="Projects" to="/Projects" /> {/* Creates buttons with text and what do do when clicked */}
         <ModernButton text="Pricing" to="/Pricing" />
         </div>
-        </GlassSurface>
+        </Surface>
       </div>
     </div>
 }
 
 function Projects() {
   return <div className='maindiv' >
-       <GlassSurface 
+       <Surface
   width={'100%'} 
   height={'100%'}
   borderRadius={24}
   className="my-custom-class"
 >     
       <SplitText
+  text="Pojects"
+  tag="h1"
+  className="BigText"
+  splitType="chars"
+  />
+
+  <div className="contentinner" style={{height: "60%", with: "100%", overflowY: "auto"}}>
+      <SplitText
   text="Global Stock Project:"
   tag="h1"
-  style={{ marginBottom: "15px", marginTop: "3px", color: "white" }}
   splitType="chars"
-/>
+  />
+
+
+
       <GlobalStockvid/>
+      <RanksSystemvid/>
             <SplitText
   text="Thats it for now, more coming soon!"
   tag="h1"
   style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
   splitType="chars"
 />
+       </div>
      <div style={{with: '100%', display: "flex", marginTop: '3%', marginBottom: "0px", flexDirection: "row", height: "10%"}}>
         <ModernButton text="Home" to="/" />
         <ModernButton text="Pricing" to="/Pricing" />
       </div>
-        </GlassSurface>
+ 
+        </Surface>
       </div>
+      
 }
 
 
 function Pricing(){
   return  <div className='maindiv' style={{height: "94vh", marginTop: "0px", top: "3vh",}} >
-       <GlassSurface 
+       <Surface
+
   width={'100%'} 
   height={'100%'}
   borderRadius={24}
@@ -275,7 +326,7 @@ function Pricing(){
         <ModernButton text="Home" to="/" />
         <ModernButton text="Projects" to="/Projects" />
         </div>
-        </GlassSurface>
+        </Surface>
 </div>
 }
 function App() {
