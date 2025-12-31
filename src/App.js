@@ -1,4 +1,4 @@
-import './App.css'; // importin all of the stuff thats gona be used
+import './App.css';
 import LiquidEther from './LiquidEther';
 import GradientText from './GradientText';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -9,7 +9,7 @@ import GlobalStock from './Videos/GlobalStock.mp4';
 import RanksSystem from './Videos/Ranks.mp4'
 import { clamp } from 'three/src/math/MathUtils.js';
 
-function GradText({ text, size }) { /* creates text with gradient*/
+function GradText({ text, size }) {
   return (
     <div style={{ fontSize: size || "16px" }}>
       <GradientText
@@ -277,7 +277,7 @@ function Projects() {
 
 function Pricing() {
   return <div className='maindiv' style={{ height: "94vh", marginTop: "0px", top: "3vh", }} >
-    <Shuffle  /* Theese next lines are functions to create elemtns of the text that shuffels */
+    <Shuffle
       tag="h2"
       text="Pricing:"
       shuffleDirection="right"
@@ -290,13 +290,13 @@ function Pricing() {
       respectReducedMotion={true}
       loop={true}
     />
-    <SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" /> {/* Theese next lines are functions to create elemtns of the text that slowly comes up really cool effect, will be shown in live example*/}
+    <SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
     <SplitText text="Medium scripts: 1k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
     <SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
     <SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
     <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
-    <TOS /> {/* loads the terms of service*/}
+    <TOS />
     <div style={{
       width: "100%",
       display: "flex",
@@ -315,7 +315,7 @@ function Pricing() {
 function App() {
   return (
     <BrowserRouter>
-      <LiquidEther // creates background that will be used for all other scripts, here are settins of it i dont think i need to explain they explan them self prety much
+      <LiquidEther
         mouseForce={40}
         cursorSize={40}
         isViscous={false}
@@ -330,9 +330,9 @@ function App() {
         takeoverDuration={0.25}
         autoResumeDelay={1100}
         autoRampDuration={0.6}
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }} // some quick css
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, background: "#060010" }} 
       />
-      <Routes> {/* routes, loads the pages in the url */}
+      <Routes> 
         <Route path="/" element={<Home />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Pricing" element={<Pricing />} />
@@ -340,4 +340,4 @@ function App() {
     </BrowserRouter>
   );
 }
-export default App; // exports the app that will be loaded by index.js(other code)
+export default App;
