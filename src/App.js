@@ -156,7 +156,6 @@ const TOS = () => {
             <strong>Bug Fixing Services:</strong>
             <ul>
               <li>You need to provide the place with the bug, I check it out and after fixing you pay and recive the fixed version afterwards.</li>
-              <li>I may only work on my own version of your place/expirience that I delete after you recive fixed version.</li>
               <li>If my fix coused another bug to apear, I may look into it and fix it if I think it's due to my script/code.</li>
             </ul>
           </li>
@@ -212,6 +211,8 @@ function Home() {
       <SplitText text="Global stock" tag="h2" style={{ color: "white" }} splitType="chars" />
       <SplitText text="Custom randomness systems that don't depend on seeds" tag="h2" style={{ color: "white" }} splitType="chars" />
       <SplitText text="Randomness in general" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="Placment systems" tag="h2" style={{ color: "white" }} splitType="chars" />
+      <SplitText text="Datastores" tag="h2" style={{ color: "white" }} splitType="chars" />
       <SplitText text="And much more" tag="h2" style={{ color: "white" }} splitType="chars" />
       <div style={{
         width: "100%",
@@ -290,10 +291,11 @@ function Pricing() {
       respectReducedMotion={true}
       loop={true}
     />
-    <SplitText text="Small scripts: 250 to 650 Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-    <SplitText text="Medium scripts: 1k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="Small scripts: 500 to 2k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="Medium scripts: 2k to 5k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
     <SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-    <SplitText text="I prefer to do medium or large scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
+    <SplitText text="I prefer to do small or medium scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
+    <SplitText text="The prices don't depend on the line count, they depend on the complexety and how much the game depends on the script/s." tag="h2" style={{ color: "white" }} splitType="words" />
     <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
 
     <TOS />
