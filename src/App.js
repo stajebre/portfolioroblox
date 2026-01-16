@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 import GlobalStock from './Videos/GlobalStock.mp4';
+import PlacmentStock from './Videos/Placment.mp4'
 import RanksSystem from './Videos/Ranks.mp4'
 
 function GradText({ text, size }) {
@@ -34,6 +35,22 @@ function GlobalStockvid() {
         muted={false}
       >
         <source src={GlobalStock} type="video/mp4" />
+      </video>
+    </div>
+  );
+}
+
+function PlacmentVid() {
+  return (
+    <div style={{ pointerEvents: "all", with: 'auto', height: "auto" }}>
+      <video
+        width="97%"
+        height="auto"
+        controls
+        pointerEvents="all"
+        muted={false}
+      >
+        <source src={PlacmentStock} type="video/mp4" />
       </video>
     </div>
   );
@@ -251,6 +268,12 @@ function Projects() {
         splitType="chars"
       />
       <RanksSystemvid />
+      <SplitText
+        text="Placment System with saving:"
+        tag="h1"
+        splitType="chars"
+      />
+      <PlacmentVid />
       <SplitText
         text="Thats it for now, more coming soon!"
         tag="h1"
