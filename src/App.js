@@ -7,7 +7,6 @@ import SplitText from "./SplitText";
 import Shuffle from './Shuffle';
 import GlobalStock from './Videos/GlobalStock.mp4';
 import RanksSystem from './Videos/Ranks.mp4'
-import { clamp } from 'three/src/math/MathUtils.js';
 
 function GradText({ text, size }) {
   return (
