@@ -256,6 +256,12 @@ function Projects() {
       splitType="chars"
     />
     <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
+       <SplitText
+        text="Build A Cannon For Brianrots"
+        tag="h1"
+        splitType="chars"
+      />
+      <h2 href="https://www.roblox.com/games/112455936431298/Build-a-Cannon-For-Brainrots" target="_blank" rel="noopener noreferrer">Click Here For Link</h2>
       <SplitText
         text="Global Stock Project:"
         tag="h1"
