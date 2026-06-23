@@ -249,7 +249,9 @@ function Home() {
 
 function Projects() {
   return <div className='maindiv' >
-    <SplitText
+
+    <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
+      <SplitText
       text="Pojects"
       tag="h1"
       className="BigText"
@@ -261,7 +263,6 @@ function Projects() {
         splitType="chars"
       />
       <PlacmentVid />
-    <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
        <SplitText
         text="Build A Cannon For Brianrots"
         tag="h1"
