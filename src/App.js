@@ -255,6 +255,12 @@ function Projects() {
       className="BigText"
       splitType="chars"
     />
+          <SplitText
+        text="Placment System with saving:"
+        tag="h1"
+        splitType="chars"
+      />
+      <PlacmentVid />
     <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
        <SplitText
         text="Build A Cannon For Brianrots"
@@ -274,12 +280,6 @@ function Projects() {
         splitType="chars"
       />
       <RanksSystemvid />
-      <SplitText
-        text="Placment System with saving:"
-        tag="h1"
-        splitType="chars"
-      />
-      <PlacmentVid />
       <SplitText
         text="Thats it for now, more coming soon!"
         tag="h1"
