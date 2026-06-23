@@ -249,17 +249,17 @@ function Home() {
 
 function Projects() {
   return <div className='maindiv' >
-
-    <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
       <SplitText
       text="Pojects"
       tag="h1"
       className="BigText"
       splitType="chars"
     />
+    <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
           <SplitText
         text="Placment System with saving:"
         tag="h1"
+        tyle={{ marginBottom: "15px", marginTop: "3px", color: "white" }}
         splitType="chars"
       />
       <PlacmentVid />
