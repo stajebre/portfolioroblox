@@ -193,7 +193,10 @@ const TOS = () => {
 
 function Home() {
   return <div style={{ width: '100vw', height: '100vh', pointerEvents: 'none' }}>
-    <GradText text="Stajebre's Portfilo" size='4.8vw' />
+    <div className="home-header">
+      <img className="avatar" src={`${process.env.PUBLIC_URL}/avatar.png`} alt="Stajebre avatar" />
+      <GradText text="Stajebre's Portfolio" size='clamp(1.8rem, 4.8vw, 5rem)' />
+    </div>
     <div className='maindivhome' >
 
       <SplitText

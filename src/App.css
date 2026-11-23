@@ -534,6 +534,24 @@ font-size: clamp(1.1rem, 2.5vw, 2rem);
  margin-top: 2vh;
 }
 
+/* ---------- Home header / avatar ---------- */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.5vw, 24px);
+  padding: 8px 16px 0;
+}
+
+.avatar {
+  width: clamp(48px, 6vw, 96px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #0044ff, 0 0 18px rgba(0, 183, 255, 0.5);
+  flex-shrink: 0;
+}
+
 /* ---------- Projects page ---------- */
 .maindiv.projects-page {
   height: 90vh;
