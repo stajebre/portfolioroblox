@@ -533,3 +533,176 @@ font-size: clamp(1.1rem, 2.5vw, 2rem);
  font-size: 3.4em;
  margin-top: 2vh;
 }
+
+/* ---------- Projects page ---------- */
+.maindiv.projects-page {
+  height: 90vh;
+  height: 90svh; /* stable height on mobile, ignores the browser toolbar */
+  margin-top: 2vh;
+  box-sizing: border-box;
+  /* leave room for the nav buttons pinned to the bottom */
+  padding-bottom: calc(6vh + 24px);
+}
+
+.projects-page .BigText {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.projects-panel {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 94%;
+  box-sizing: border-box;
+  padding: clamp(12px, 2vw, 28px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: auto;
+  background: rgba(10, 6, 60, 0.55);
+  backdrop-filter: blur(6px);
+  border: 2px solid #1e0088;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vh, 36px);
+  scrollbar-color: #00b7ff rgba(0, 69, 97, 0.308);
+  scrollbar-width: thin;
+}
+
+.projects-section-title {
+  text-align: left;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  border-bottom: 2px solid rgba(0, 183, 255, 0.4);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  min-width: 0;
+  background: rgba(28, 12, 245, 0.22);
+  border: 2px solid rgba(0, 183, 255, 0.35);
+  border-radius: 12px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-card {
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+.project-card-title {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.project-card-desc {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+}
+
+.play-button {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px; /* comfortable tap target */
+  padding: 0 22px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: #0044ff;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px rgb(0, 247, 255);
+  transition: background 0.2s ease, transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.play-button:active {
+  background: #00b7ff;
+  transform: scale(0.97);
+}
+
+/* hover effects only on devices with a real mouse, so taps don't leave cards stuck "hovered" */
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: #00b7ff;
+    box-shadow: 0 8px 24px rgba(0, 183, 255, 0.2);
+  }
+
+  .play-button:hover {
+    background: #00b7ff;
+    transform: scale(1.04);
+  }
+}
+
+.projects-footer {
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* phones */
+@media (max-width: 600px) {
+  .maindiv.projects-page {
+    margin-top: 1vh;
+    height: 96vh;
+    height: 96svh;
+    padding-bottom: calc(6vh + 16px);
+  }
+
+  .projects-panel {
+    width: 96%;
+    padding: 12px;
+    gap: 22px;
+  }
+
+  .games-grid,
+  .videos-grid {
+    gap: 12px;
+  }
+
+  .project-card {
+    padding: 12px;
+  }
+
+  .game-card {
+    min-height: 0;
+  }
+
+  /* full-width button is easier to hit with a thumb */
+  .play-button {
+    align-self: stretch;
+  }
+}

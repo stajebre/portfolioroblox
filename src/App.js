@@ -24,49 +24,39 @@ function GradText({ text, size }) {
   );
 }
 
-function GlobalStockvid() {
+// Games I worked on. Each entry: title, link, and an optional description.
+const GAMES = [
+  { title: "Build A Cannon For Brainrots", link: "https://www.roblox.com/games/112455936431298/Build-a-Cannon-For-Brainrots" },
+  { title: "Build to Ramp", link: "https://www.roblox.com/games/83954366230306/Build-to-ramp" },
+  { title: "+1 Water Per Click", link: "https://www.roblox.com/games/90558747737197/1-Water-Per-Click" },
+];
+
+// System showcase videos. Each entry: title, an imported .mp4, and an optional description.
+const VIDEOS = [
+  { title: "Placement System with saving", video: PlacmentStock },
+  { title: "Global Stock", video: GlobalStock },
+  { title: "Ranks System", video: RanksSystem },
+];
+
+function GameCard({ title, link, description }) {
   return (
-    <div style={{ pointerEvents: "all", with: 'auto', height: "auto" }}>
-      <video
-        width="97%"
-        height="auto"
-        controls
-        pointerEvents="all"
-        muted={false}
-      >
-        <source src={GlobalStock} type="video/mp4" />
-      </video>
+    <div className="project-card game-card">
+      <h3 className="project-card-title">{title}</h3>
+      {description && <p className="project-card-desc">{description}</p>}
+      <a className="play-button" href={link} target="_blank" rel="noopener noreferrer">
+        Play on Roblox
+      </a>
     </div>
   );
 }
 
-function PlacmentVid() {
+function VideoCard({ title, video, description }) {
   return (
-    <div style={{ pointerEvents: "all", with: 'auto', height: "auto" }}>
-      <video
-        width="97%"
-        height="auto"
-        controls
-        pointerEvents="all"
-        muted={false}
-      >
-        <source src={PlacmentStock} type="video/mp4" />
-      </video>
-    </div>
-  );
-}
-
-function RanksSystemvid() {
-  return (
-    <div style={{ pointerEvents: "all", with: 'auto', height: "auto" }}>
-      <video
-        width="97%"
-        height="auto"
-        controls
-        pointerEvents="all"
-        muted={false}
-      >
-        <source src={RanksSystem} type="video/mp4" />
+    <div className="project-card">
+      <h3 className="project-card-title">{title}</h3>
+      {description && <p className="project-card-desc">{description}</p>}
+      <video className="project-video" controls preload="metadata">
+        <source src={video} type="video/mp4" />
       </video>
     </div>
   );
@@ -207,7 +197,7 @@ function Home() {
     <div className='maindivhome' >
 
       <SplitText
-        text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 2 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio."
+        text="Hey! Stajebre here, full stack developer with 2-3 years outside of Roblox and about 3 years in Roblox Studio. I make games perform better, mainly a scripter and I have some experience in other categories of Roblox Studio and game design."
         tag="h1"
         className="welcometext"
         style={{ width: "60%", marginBottom: "15px", color: "white" }}
@@ -248,45 +238,29 @@ function Home() {
 }
 
 function Projects() {
-  return <div className='maindiv' >
-      <SplitText
-      text="Pojects"
+  return <div className='maindiv projects-page' >
+    <SplitText
+      text="Projects"
       tag="h1"
       className="BigText"
       splitType="chars"
     />
-    <div className="contentinner" style={{ height: "70%", with: "100%", overflowY: "auto" }}>
-          <SplitText
-        text="Placment System with saving:"
-        tag="h1"
-        tyle={{ marginBottom: "15px", marginTop: "3px", color: "white" }}
-        splitType="chars"
-      />
-      <PlacmentVid />
-       <SplitText
-        text="Build A Cannon For Brianrots"
-        tag="h1"
-        splitType="chars"
-      />
-      <a href="https://www.roblox.com/games/112455936431298/Build-a-Cannon-For-Brainrots" target="_blank" rel="noopener noreferrer" style={{ color: 'blue',fontSize: '1.5em'}}>Click Here For Link</a>
-      <SplitText
-        text="Global Stock Project:"
-        tag="h1"
-        splitType="chars"
-      />
-      <GlobalStockvid />
-      <SplitText
-        text="Ranks System:"
-        tag="h1"
-        splitType="chars"
-      />
-      <RanksSystemvid />
-      <SplitText
-        text="Thats it for now, more coming soon!"
-        tag="h1"
-        style={{ marginBottom: "5px", marginTop: "3px", color: "white" }}
-        splitType="chars"
-      />
+    <div className="projects-panel">
+      <section className="projects-section">
+        <h2 className="projects-section-title">Games</h2>
+        <div className="games-grid">
+          {GAMES.map((game) => <GameCard key={game.link} {...game} />)}
+        </div>
+      </section>
+
+      <section className="projects-section">
+        <h2 className="projects-section-title">Systems Showcase</h2>
+        <div className="videos-grid">
+          {VIDEOS.map((vid) => <VideoCard key={vid.title} {...vid} />)}
+        </div>
+      </section>
+
+      <p className="projects-footer">That's it for now, more coming soon!</p>
     </div>
     <div style={{
       width: "100%",
@@ -320,9 +294,9 @@ function Pricing() {
       respectReducedMotion={true}
       loop={true}
     />
-    <SplitText text="Small scripts: 500 to 2k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-    <SplitText text="Medium scripts: 2k to 5k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
-    <SplitText text="Large scripts: 5k to 10k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="Small scripts: 500 to 1.5k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="Medium scripts: 1.5k to 3k Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
+    <SplitText text="Large scripts: 3k to 7k+ Robux" tag="h2" style={{ color: "white" }} splitType="chars" />
     <SplitText text="I prefer to do small or medium scripts, these are the usual prices but it depends on your specific needs." tag="h2" style={{ color: "white" }} splitType="words" />
     <SplitText text="The prices don't depend on the line count, they depend on the complexety and how much the game depends on the script/s." tag="h2" style={{ color: "white" }} splitType="words" />
     <SplitText text="Interested? Dm me the details on discord @stajebre." tag="h1" style={{ color: "white" }} splitType="words" />
